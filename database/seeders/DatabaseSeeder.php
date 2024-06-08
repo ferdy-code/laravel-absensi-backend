@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Company;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -20,6 +21,18 @@ class DatabaseSeeder extends Seeder
             'name' => 'Ferdy Admin',
             'email' => 'aferdy36@gmail.com',
             'password' => Hash::make('12345678'),
+        ]);
+
+        // data dummy for company
+        Company::create([
+            'name' => 'PT. FIC16',
+            'email' => 'fic16@gmail.com',
+            'address' => 'Jl. Raya Ciledug, Ciledug, Kec. Ciledug, Kab. Bogor',
+            'latitude' => '-7.3048',
+            'longitude' => '109.1573',
+            'radius_km' => '0.5',
+            'time_in' => '08:00',
+            'time_out' => '17:00',
         ]);
     }
 }
